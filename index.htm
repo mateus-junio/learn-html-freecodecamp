@@ -56,20 +56,39 @@
 
         <section>
             <h2>Cat Form</h2>
-            <form action="https://freecatphotoapp.com/submit-cat-photo">
-                <label><input id="indoor" type="radio">Indoor</label>
-                <label><input id="outdoor" type="radio">Outdoor</label>
-                <!--label elements are used to help associate the text for an input element with the input element
+            <!--Notice that both radio buttons can be selected at the same time. 
+                    To make it so selecting one radio button automatically deselects the other, 
+                    both buttons must have a name attribute with the same value.-->
+            <!--(label) elements are used to help associate the text for an input element with the input element
                      itself (especially for assistive technologies like screen readers). 
                      For example, <label><input type="radio"> cat</label> makes it so clicking 
                      the word cat also selects the corresponding radio button.-->
-                <input type="text" name="catphotourl" placeholder="cat photo URL" required>
-                <!--required: To prevent a user from submitting your form when required information
+            <!--(required): To prevent a user from submitting your form when required information
                 is missing-->
-                <button type="submit">Submit</button>
+            <!--The (fieldset) element is used to group related inputs and labels together in a web form. 
+                fieldset elements are block-level elements, meaning that they appear on a new line.-->
+
+            <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <fieldset>
+                    <legend><h2>Is your cat an indoor or outdoor cat?</h2></legend>
+                    <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked>Indoor</label>
+                    <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor">Outdoor</label>
+                    <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                    <button type="submit">Submit</button>
+                </fieldset>
+                <fieldset>
+                    <legend><h2>What's your cat personality?</h2></legend>
+                    <input id="loving" value="loving"  name="personality" type="checkbox" checked> <label for="loving"> Loving </label> 
+                    <input id="lazy" value="lazy" name="personality" type="checkbox"> <label for="lazy"> Lazy </label> 
+                    <input id="energetic" value="energetic" name="personality" type="checkbox"> <label for="energetic"> Energetic </label> 
+                </fieldset>
             </form>
+
         </section>
     </main>
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org"> freeCodeCamp.org </a> </p>
+    </footer>
 </body>
 
 </html>
