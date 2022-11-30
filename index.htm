@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn html by building a cat photo app (freeCodeCamp)</title>
+</head>
+
+<body>
+    <main>
+        <h1>CatPhotoApp</h1>
+
+        <section>
+            <h2>Cat Photos</h2>
+
+            <!--target attribute with the value _blank to the anchor (a)
+        element's opening tag, so that the link opens in a a new tab. -->
+            <p>Click here to view more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a>.</p>
+
+            <!-- <a href="https://freecatphotoapp.com">link to cat pictures</a> -->
+
+            <!--Turn the image into a link by surrounding it with necessary element tags. 
+        Use https://freecatphotoapp.com as the anchor's href attribute value-->
+            <a href="https://freecatphotoapp.com"> <img
+                    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+                    alt="A cute orange cat lying on its back"> </a>
+        </section>
+
+        <section>
+            <h2>Cat Lists</h2>
+            <h3>Things cats love:</h3>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <figure> <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of
+            lasagna on a plate.">
+                <figcaption>Cats <em>love</em> lasagna</figcaption>
+                <!--Legend of the image-->
+            </figure>
+            <h3>Top 3 things cats hate:</h3>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+            <figure>
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+                    alt="Five cats looking around a field.">
+                <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Cat Form</h2>
+            <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <label><input id="indoor" type="radio">Indoor</label>
+                <label><input id="outdoor" type="radio">Outdoor</label>
+                <!--label elements are used to help associate the text for an input element with the input element
+                     itself (especially for assistive technologies like screen readers). 
+                     For example, <label><input type="radio"> cat</label> makes it so clicking 
+                     the word cat also selects the corresponding radio button.-->
+                <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                <!--required: To prevent a user from submitting your form when required information
+                is missing-->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
