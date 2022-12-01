@@ -1,0 +1,126 @@
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.established {
+    font-style: italic;
+}
+
+/*Next, you want to center the div horizontally. 
+You can do this by setting its margin-left and margin-right properties to auto. 
+Think of the margin as invisible space around an element. 
+Using these two margin properties, center the div element within the body element*/
+/*The current width of the menu will always take up 80% of the body element's width. 
+On a very wide screen, the coffee and dessert appear far apart from their prices.
+Add a max-width property to the menu class with a value of 500px to prevent it from growing too wide.*/
+.menu {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20%;
+    max-width: 500px;
+}
+
+/*The image you added is not centered horizontally like the Coffee heading above it. 
+img elements are "like" inline elements.
+To make the image behave like heading elements (which are block-level),
+create an img type selector and use the value block for the display property 
+and use the applicable margin-left and margin-right values to center it horizontally.*/
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*It would be nice if the vertical space between the h2 elements and their associated 
+    icons was smaller. The h2 elements have default top and bottom margin space, 
+    so you could change the bottom margin of the h2 elements to say 0 or another number.
+    There is an easier way, simply add a negative top margin to the img elements to pull 
+    them up from their current positions. Negative values are created using 
+    a - in front of the value. To complete this project, go ahead and use 
+    a negative top margin of 25px in the img type selector.*/
+    margin-top: -25px;
+}
+
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+.item p {
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h1,
+h2 {
+    /*You can add a fallback value for the font-family by adding 
+    another font name separated by a comma. Fallbacks are used in instances 
+    where the initial is not found/available.*/
+    font-family: Impact, serif;
+}
+
+.flavor,
+.dessert {
+    text-align: left;
+    width: 75%;
+}
+
+.price {
+    text-align: right;
+    width: 25%;
+}
+
+/*FOOTER*/
+footer {
+    font-size: 14px;
+}
+
+a {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    /*Change the color of the footer Visit our website 
+    link to be brown when a user hovers over it.*/
+    color: brown;
+}
+
+a:active {
+    /*You change properties of a link when the link is actually being 
+    clicked by using a pseudo-selector that looks like 
+    a:active { propertyName: propertyValue; }.*/
+    color: brown;
+}
+
+.address {
+    margin-bottom: 5px;
+}
